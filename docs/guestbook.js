@@ -62,8 +62,8 @@ const guestbook = {
 
     guestbook.add(
       $('#name').val().trim(),
-      $('#email').val().trim(),
-      $('#comment').val().trim()
+      $('#comment').val().trim(),
+      $('#email').val().trim()
     ).done(function(result) {
       // reload entries
       loadEntries();
