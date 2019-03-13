@@ -11,7 +11,7 @@ const guestbook = {
       dataType: 'json'
     });
   },
-  // add a single guestbood entry
+  // add a single guestbook entry
   add(name, email, comment) {
     console.log('Sending', name, email, comment)
     return $.ajax({
@@ -44,7 +44,7 @@ const guestbook = {
       if (!result.entries) {
         return;
       }
-
+      
       const context = {
         entries: result.entries
       }
@@ -62,8 +62,8 @@ const guestbook = {
 
     guestbook.add(
       $('#name').val().trim(),
-      $('#comment').val().trim(),
-      $('#email').val().trim()
+      $('#email').val().trim(),
+      $('#comment').val().trim()
     ).done(function(result) {
       // reload entries
       loadEntries();
